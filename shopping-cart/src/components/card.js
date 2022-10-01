@@ -3,6 +3,8 @@
 import React from 'react';
 function Card(props) {
 
+    
+
     return (
         <>
         <div class='card'>
@@ -14,6 +16,8 @@ function Card(props) {
                 <div class="stars"></div><div class="stars"></div><div class="stars"></div><div class="stars"></div><div class="stars"></div>
                 <div>{props.oem}</div>
                 <div>{props.price}</div>
+                <button onClick={props.onClick}>Add to cart</button>
+                <button>Remove</button>
             </div>    
         </div>
         <br />
