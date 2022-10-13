@@ -17,7 +17,7 @@ function Card(props) {
                 <div>{props.oem}</div>
                 <div>{props.price}</div>
                 <button onClick={props.onClick}>Add to cart</button>
-                <button>Remove</button>
+                <button onClick={props.onRemove}>Remove</button>
             </div>    
         </div>
         <br />
