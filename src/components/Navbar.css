@@ -1,0 +1,37 @@
+.navbar {
+    background-color: #4718ca;
+    font-size: 20px;
+    display: grid;
+    grid-template-areas:
+    "navbar-left navbar-right";
+    height: 75px;
+    align-items: center !important;
+  }
+  .navbar a {
+    padding: 10px;
+  }
+  
+  .navbar a:link {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  .navbar a:visited {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  .navbar a:hover {
+    color: red;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  .navbar a:active {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+  }
+

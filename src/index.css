@@ -31,32 +31,3 @@ code {
   height: 20px;
   width: 20px;
 }
-.navbar {
-  background-color: #4718ca;
-  font-size: 34px;
-  
-}
-
-a:link {
-  color: white;
-  background-color: transparent;
-  text-decoration: none;
-}
-
-a:visited {
-  color: white;
-  background-color: transparent;
-  text-decoration: none;
-}
-
-a:hover {
-  color: red;
-  background-color: transparent;
-  text-decoration: underline;
-}
-
-a:active {
-  color: red;
-  background-color: transparent;
-  text-decoration: underline;
-}
