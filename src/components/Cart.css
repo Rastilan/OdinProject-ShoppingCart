@@ -14,3 +14,9 @@
 .side-drawer.open {
   transform: translateX(0);
 }
+
+.close-cart {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+}

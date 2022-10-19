@@ -1,6 +1,6 @@
 import './App.css';
 import Navbar from './components/Navbar';
-import React, { useEffect, useState} from 'react';
+import React, { useState} from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Cart from './components/Cart';
 import Shop from './components/Shop';
@@ -18,6 +18,8 @@ function App() {
   let [cart, setCart] = useState([]);
   let [cartCost, setCartCost] = useState(0);
   let [showCart, setShowCart] = useState(false);
+  let [itemCount, setItemCount] = useState(0);
+  
   
 const handleBackdropClick = () => {
   setShowCart(false);
@@ -28,21 +30,19 @@ const handleCartButton = () => {
 }
 
   
-  useEffect(() => {
-    console.log(cartCost)
-  }, [cartCost])  
+
 
 
 
   return (
     
     <div className="App">
-      <Navbar onCartIconClick={handleCartButton} />
+      <Navbar onCartIconClick={handleCartButton} cart={cart} itemCount={itemCount}/>
       <Routes>
         <Route path="/" element={<Home /> } />
-        <Route path="/Shop" element={<Shop cart={cart} setCart={setCart} cartCost={cartCost} setCartCost={setCartCost}/> } />
+        <Route path="/Shop" element={<Shop cart={cart} setCart={setCart} cartCost={cartCost} setCartCost={setCartCost} setItemCount={setItemCount}/> } />
       </Routes>
-      <Cart show={showCart} />
+      <Cart show={showCart} onClick={handleBackdropClick} cart={cart} cartCost={cartCost}/>
       {showCart && <BackDrop closeDrawer={handleBackdropClick} />}
 
     </div>
